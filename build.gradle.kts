@@ -4,7 +4,6 @@ plugins {
     application
 
     `maven-publish`
-    signing
 
     kotlin("jvm")
     kotlin("plugin.serialization")
@@ -116,9 +115,4 @@ publishing {
             artifact(sourceJar)
         }
     }
-}
-
-signing {
-    useGpgCmd()
-    sign(publishing.publications["maven"])
 }
